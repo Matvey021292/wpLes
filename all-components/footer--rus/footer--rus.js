@@ -1,0 +1,1 @@
+$(".current_year").text(new Date().getFullYear());

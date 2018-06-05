@@ -1,0 +1,171 @@
+*
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+.container--vkontakte-ru
+  max-width: 900px
+  margin: auto
+  .link
+    text-decoration: none
+    color: #2a5885
+    &:hover
+      text-decoration: underline
+  .top_section
+    background-color: #4a76a8
+    height: 40px
+    line-height: 38px
+    border-radius: 3px 3px 0 0
+    position: relative
+  .top_section__comments-count
+    color: #fff
+    font-size: 13px
+    font-weight: 500
+    padding-left: 15px
+  .top_section__logo
+    position: absolute
+    top: 5px
+    right: 15px
+    img
+      width: 20px
+      height: 20px
+  .user_section
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    padding: 14px
+    border-radius: 0 0 3px 3px
+    border: 1px solid #e1e4eb
+    background: #fafbfc
+  .user_section__photo
+    margin-right: 14px
+    img
+      border-radius: 50%
+      width: 50px
+      height: 50px
+  .user_section__content
+    width: 100%
+    position: relative
+    .textarea
+      font-size: 14px
+      width: 100%
+      padding: 3px 8px
+      min-height: 60px
+      max-height: 500px
+      min-width: 180px
+      max-width: calc(900px - 22px - 50px)
+      width: 100%
+      border: 1px solid #d3d6db
+      word-wrap: break-word
+      outline: none
+    .icon--smile
+      padding: 5px
+      position: absolute
+      top: 5px
+      right: 10px
+      img
+        width: 15px
+        height: 15px
+    .bottom
+      margin-top: 10px
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-pack: end
+      -ms-flex-pack: end
+      justify-content: flex-end
+      position: relative
+      .button
+        background-color: #5181b8
+        color: #fff
+        padding: 7px 16px 8px
+        border-radius: 4px
+        border: 0
+        cursor: pointer
+      .icon--clip
+        position: absolute
+        left: 0
+        padding: 5px
+        img
+          width: 15px
+          height: 15px
+      [type="checkbox"]
+        left: -9999px
+        position: absolute
+        &:checked + label:before
+          content: "\2713"
+          display: -webkit-box
+          display: -ms-flexbox
+          display: flex
+          -webkit-box-pack: center
+          -ms-flex-pack: center
+          justify-content: center
+          -webkit-box-align: center
+          -ms-flex-align: center
+          align-items: center
+          font-weight: bold
+          color: #666
+      .label
+        position: relative
+        cursor: pointer
+        font-size: 13px
+        padding-right: 30px
+        -ms-flex-item-align: center
+        align-self: center
+        &:before
+          content: ""
+          position: absolute
+          right: 10px
+          top: 0px
+          width: 14px
+          height: 14px
+          background-color: #fff
+          border-radius: 3px
+          border: 1px solid lightgray
+  .reviews_section
+    margin-top: 20px
+    padding: 0 14px
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+  .reviews_section__photo
+    margin-right: 14px
+    img
+      width: 50px
+      height: 50px
+      border-radius: 50%
+  .reviews_section__content
+    position: relative
+    width: 100%
+    .link--name
+      font-weight: 500
+      color: #2a5885
+    .link--comment
+      font-size: 12.5px
+    .link--like
+      position: absolute
+      right: 0
+      text-decoration: none
+      img
+        width: 13px
+        height: 13px
+    .comment
+      font-size: 13px
+      line-height: 1.36
+    .bottom
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      .date
+        color: #939393
+        font-size: 12.5px
+        margin-right: 6px
+
+@media screen and (max-width: 406px)
+  .bottom
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center

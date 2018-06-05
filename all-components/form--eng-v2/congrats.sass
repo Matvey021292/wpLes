@@ -1,0 +1,218 @@
+/* KEYFRAMES */
+@keyframes preloader
+  0%
+    transform: scale(1)
+    opacity: 1
+
+  100%
+    transform: scale(.55)
+    opacity: .6
+
+@keyframes shake
+  0%
+    transform: translateY(227%)
+  25%
+    transform: translateY(222%)
+  50%
+    transform: translateY(227%)
+  75%
+    transform: translateY(222%)
+  100%
+    transform: translateY(227%)
+
+/* STYLES */
+.congrats
+  font-family: Nextart, sans-serif
+  position: absolute
+  width: 100%
+  height: 100vh
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  color: #000
+  background: #1d1d1d
+  display: none
+  z-index: 99999
+
+  &__container
+    position: relative
+    width: 100%
+    height: 100vh
+    max-width: 1920px
+    margin: 0 auto
+
+  &__close
+    position: absolute
+    top: 15px
+    right: 25px
+    font-size: 50px
+    cursor: pointer
+    z-index: 2
+    display: none
+    color: #fff
+
+.congrats-left
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 5%
+  width: 40%
+  color: #fff
+
+  &__title
+    font-size: 120px
+    font-weight: 700
+    letter-spacing: -7px
+    margin: 0 auto
+    display: none
+
+  &__text
+    font-size: 40px
+    font-weight: 600
+    margin: 0 auto
+    line-height: 1.2
+    display: none
+
+.preloader
+  display: none
+  line-height: .5
+
+  &__dot
+    width: 18px
+    height: 18px
+    background: #fff
+    border-radius: 50%
+    display: inline-block
+    margin: 0 -2px -1px
+
+    &--1
+      animation: preloader linear .75s infinite alternate
+
+    &--2
+      animation: preloader linear .75s .25s infinite alternate
+
+    &--3
+      animation: preloader linear .75s .5s infinite alternate
+
+
+.congrats-right
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 47%
+  width: 50%
+
+  img
+    position: relative
+    width: 100%
+
+  &__item-1
+    text-align: center
+
+    img
+      display: none
+      transform: scale(.3)
+      transition: 1.5s
+
+  &__item-2
+    width: 60%
+
+    img
+      display: none
+      transform: translateY(25%)
+      left: 42%
+
+  &__item-3
+    width: 51%
+
+    img
+      display: none
+      transform: translateY(227%)
+      left: 49.8%
+
+@media (max-width: 1640px)
+  .congrats
+    &__close
+      font-size: 40px
+
+  .congrats-left
+    &__title
+      font-size: 100px
+
+    &__text
+      font-size: 30px
+
+  .preloader
+    &__dot
+      width: 15px
+      height: 15px
+
+@media (max-width: 1340px)
+  .congrats-left
+    &__title
+      font-size: 77px
+
+    &__text
+      font-size: 23px
+
+  .preloader
+    &__dot
+      width: 12px
+      height: 12px
+      margin: 0 -1px -1px
+
+@media (max-width: 991px)
+  .congrats
+    &__container
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      height: auto
+
+  .congrats-left
+    position: static
+    transform: translateY(0)
+    text-align: center
+    width: 100%
+    margin: 0 auto
+
+  .congrats-right
+    position: static
+    transform: translateY(0)
+    margin: 0 auto
+    width: 100%
+    max-width: 500px
+
+@media (max-width: 480px)
+  .congrats
+    &__close
+      font-size: 30px
+      right: 17px
+
+  .congrats-left
+    &__title
+      font-size: 57px
+      letter-spacing: -4px
+
+    &__text
+      font-size: 20px
+
+  .preloader
+    &__dot
+      width: 11px
+      height: 11px
+
+@media (max-width: 374px)
+  .congrats-left
+    &__title
+      font-size: 50px
+      letter-spacing: -2px
+
+    &__text
+      font-size: 18px
+
+  .preloader
+    &__dot
+      width: 10px
+      height: 10px

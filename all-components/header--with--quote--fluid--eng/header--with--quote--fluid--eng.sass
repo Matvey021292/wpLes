@@ -1,0 +1,30 @@
+header
+  background-color: #d2d2d2
+  .logo
+    margin-top: 15px
+    margin-bottom: 15px
+    a
+      display: block
+      text-align: center
+
+  .quote
+    margin-top: 15px
+    margin-bottom: 15px
+    p
+      text-align: right
+      font-style: italic
+      &:before, &:after
+        content: quote("\"")
+      &:before
+        margin-right: 5px
+
+      &:after
+        margin-left: 5px
+
+      @media screen and (max-width: 540px)
+        text-align: center
+        overflow: hidden
+
+  .placeholder
+    margin-top: 15px
+    margin-bottom: 15px

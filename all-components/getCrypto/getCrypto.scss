@@ -1,0 +1,21 @@
+.getcrypto {
+	padding: 25px 0;
+}
+
+.crypto {
+	padding-bottom: 20px;
+	text-align: center;
+	.up {
+		color: green;
+	}
+	.down {
+		color: red;
+	}
+}
+
+.crypto-item {
+	display: inline-block;
+	&+ & {
+		margin-left: 20px;
+	}
+}

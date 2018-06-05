@@ -1,0 +1,49 @@
+.video
+  height: 200px
+  margin: 10px 0
+  border: 1px solid darkgray
+  position: relative
+
+.left-side, .video-side
+  border: 1px solid darkgray
+
+video
+  width: 100%
+  height: 100%
+
+.video
+  &:before
+    content: ""
+    background: url('../img/play.svg')
+    background-size: cover
+    position: absolute
+    width: 0px
+    height: 50px
+    top: 50%
+    left: 50%
+    -webkit-transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
+    -webkit-transition: 0.2s
+    -o-transition: 0.2s
+    transition: 0.2s
+  &:hover:before
+    width: 50px
+  &.active
+    &:before
+      content: ""
+      background: url('../img/pause.svg')
+      background-size: cover
+      position: absolute
+      width: 50px
+      height: 0px
+      top: 50%
+      left: 50%
+      -webkit-transform: translate(-50%, -50%)
+      -ms-transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%)
+      -webkit-transition: 0.2s
+      -o-transition: 0.2s
+      transition: 0.2s
+    &:hover:before
+      height: 50px

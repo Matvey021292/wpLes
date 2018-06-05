@@ -1,0 +1,59 @@
+<section class="market">
+    <div class="container">
+        <div class="row">
+           @@loop('order_items.html', [
+               {
+                   "img":     "img/antrouter.png",
+                   "img-sm":  "img/antrouter-sm.png",
+                   "name":    "Antrouter",
+                   "price":   "&#36;999"
+               },
+               {
+                   "img":     "img/antminer.png",
+                   "img-sm":  "img/antminer-sm.png",
+                   "name":    "Antminer",
+                   "price":   "&#36;999"
+               }
+           ])
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="item">
+                    <div class="item_image">
+                        <img src="img/antminerl3.png" alt="">
+                        <img class="sm" src="img/antminerl3-ns.png" alt="">
+                    </div>
+                    <div class="item_name">
+                        <span>Antminer S9-13.5TH/s</span>
+                    </div>
+                    <div class="item_price">
+                        <span class="new"><img class="old" src="img/crossed.png"> $1099 USD</span>
+                    </div>
+                    <button class="item_buy open-form">Купить</button>
+                </div>
+                <div class="counter">
+                    <p>До конца акции:</p>
+                    <div class="timer">
+                        <div class="timer__item">
+                            <div class="timer-offer-hours timer__number"></div>
+                        </div>
+                        <div class="timer__item timer__divider">:</div>
+                        <div class="timer__item">
+                            <div class="timer-offer-min timer__number"></div>
+                        </div>
+                        <div class="timer__item timer__divider">:</div>
+                        <div class="timer__item">
+                            <div class="timer-offer-sec timer__number"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @@loop('order_items.html', [
+                {
+                   "img":     "img/janbatch.png",
+                   "img-sm":  "img/janbatch-sm.png",
+                   "name":    "Janbatch",
+                   "price":   "&#36;999"
+               }
+            ])
+        </div>
+    </div>
+</section>

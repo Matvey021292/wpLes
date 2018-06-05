@@ -1,0 +1,231 @@
+.ssl
+  .ssl-certificate-wrapper
+    display: flex
+    align-items: center
+    width: 100%
+    border: 1px solid #b1b1b1
+    font-family: Roboto
+    margin: 0
+    overflow: hidden
+    text-overflow: ellipsis
+    font-size: 12px
+    .ssl-certificate
+      display: flex
+      align-items: center
+      position: relative
+      padding: 5px 10px
+      margin-right: 10px
+      padding-right: 15px
+      transition: all 0.3s
+      cursor: default
+      color: #2a8251
+      .ssl-lock
+        display: flex
+        align-items: center
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+
+
+      i
+        font-size: 13px
+        margin-right: 5px
+        transition: all 0.5s
+
+
+      &:after
+        content: ""
+        display: block
+        position: absolute
+        top: 50%
+        left: 100%
+        transform: translateY(-50%)
+        width: 1px
+        opacity: 1
+        height: 55%
+        background-color: #b1b1b1
+        transition: all 0.5s
+
+
+      &:hover
+        background-color: #f3f3f3
+
+    .country
+      position: relative
+      text-transform: uppercase
+      margin-left: 7px
+      &:before
+        content: "["
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        transform: translateX(-100%)
+        height: 100%
+
+      &:after
+        content: "]"
+        display: block
+        position: absolute
+        top: 0
+        left: 100%
+        height: 100%
+
+
+    .client-name
+      overflow: hidden
+      text-overflow: ellipsis
+
+  .ssl-icon
+    display: none
+    padding: 5px 10px
+    border: 1px solid #b1b1b1
+    text-align: right
+    color: #33c363
+
+  .ssl-yandex
+    display: none
+    border: 1px solid #b1b1b1
+    padding: 5px 10px
+    text-align: right
+    cursor: default
+    &:hover
+      background-color: #f3f3f3
+
+    .ssl-title
+      color: #28a024
+      margin-right: 15px
+
+    .icon
+      display: inline-flex
+      padding: 3px 5px
+      background-color: #28a024
+      i
+        color: #fff
+  &.chrome
+    .ssl-certificate-wrapper
+      .ssl-certificate
+        position: relative
+        i
+          margin-right: 5px
+
+        &:hover
+          &:after
+            opacity: 0
+
+      .client-name
+        span
+          color: #2a8251
+
+  &.firefox
+    .ssl-certificate-wrapper
+      .ssl-certificate
+        color: #1a900b
+        cursor: default
+        i
+          font-size: 18px
+          color: #1bbc0b
+
+        &:after
+          background-color: #1bbc0b
+          height: 80%
+
+      .country
+        &:before
+          content: "("
+
+        &:after
+          content: ")"
+
+      .client-name
+        span
+          color: #8c8c8c
+
+  &.ie
+    .ssl-certificate-wrapper
+      display: flex
+      justify-content: space-between
+      align-items:  center
+      background-color: #b0f19b
+      font-family: "Roboto-ie"
+      font-size: 12px
+      i
+        position: relative
+        transform: translateY(2px)
+        font-size: 16px
+
+      .ssl-certificate
+        order: 2
+        margin-right: 0
+        color: #094209
+        cursor: default
+        .ssl-lock
+          display: inline-block
+
+        &:after
+          display: none
+
+        &:hover
+          background-color: transparent
+          i
+            color: #efc21d
+
+      .country
+        margin-left: 5px
+
+      .client-name
+        order: 1
+        margin-left: 10px
+        margin-right: 10px
+
+      &:hover
+        background-color: rgba(201, 245, 186, 1)
+
+  &.opera
+    .ssl-certificate-wrapper
+      .ssl-certificate
+        color: #23b51e
+        font-weight: bold
+        margin-right: 5px
+        padding-right: 11px
+        cursor: default
+        i
+          font-size: 17px
+          transition: none
+          margin-right: 10px
+
+        &:hover
+          background-color: transparent
+          i
+            color: #1a900b
+
+      .protocol
+        display: none
+
+  &.safari
+    .ssl-certificate-wrapper
+      justify-content: center
+      .ssl-certificate
+        color: #3ac374
+        &:after
+          display: none
+
+
+      .client-name
+        display: none
+
+      .country
+        display: none
+
+  &.android
+    .ssl-certificate-wrapper
+      display: none
+
+    .ssl-icon
+      display: block
+  &.yandex
+    .ssl-yandex
+      display: block
+
+    .ssl-certificate-wrapper
+      display: none

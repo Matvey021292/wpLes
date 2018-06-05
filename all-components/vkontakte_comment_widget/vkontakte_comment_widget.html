@@ -1,0 +1,53 @@
+<div id="app">
+    <div v-if="json !== null">
+        <div class="container container--vkontakte-ru">
+            <div class="top_section">
+                <div class="top_section__comments-count">
+                    Комментарии
+                </div>
+                <a v-bind:href="json.options.default_url" class="top_section__logo">
+                        <img src="img/vk.svg" alt="">
+                    </a>
+            </div>
+            <div class="user_section">
+                <div class="user_section__photo">
+                        <img src="img/avatar.jpg" alt="">
+                </div>
+                <div class="user_section__content">
+                    <textarea class="textarea" placeholder="Ваш комментарий..." @click="activeForm(); fakePath()">
+                        </textarea>
+                    <a v-bind:href="json.options.default_url" class="icon--smile">
+                            <img src="img/smiling-emoticon-square-face.svg" alt="">
+                        </a>
+                    <div class="bottom">
+                        <a v-bind:href="json.options.default_url" class="icon icon--clip">
+                               <img src="img/paper-clip.svg" alt="">
+                           </a>
+                        <a href="" class="link link--add-file"></a>
+                        <input type="checkbox" id="vkontakte-widget-input">
+                        <label for="vkontakte-widget-input" class="label">
+                                поделиться с друзьями
+                            </label>
+                        <button @click="fakePath()" class="button">
+                                Отправить
+                            </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <vkontakte-widget v-for="(data, index) in comments" :data="data" :img="json.options.img_dir" :url="json.options.default_url" :default_url="json.options.default_url" :key="index">
+
+            </vkontakte-widget>
+            <infinite-loading @infinite="infiniteHandler">
+                <span slot="no-more">
+                    Больше комментариев нет :(
+                </span>
+            </infinite-loading>
+
+        </div>
+
+    </div>
+</div>

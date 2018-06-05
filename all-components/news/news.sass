@@ -1,0 +1,57 @@
+.analytic-items
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  .analytic-item
+    -webkit-box-flex: 1
+    -ms-flex: 1 1 50%
+    flex: 1 1 50%
+    padding: 30px 0 0 0
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    padding: 10px
+  .analytic-item-icon
+    -webkit-box-flex: 1
+    -ms-flex: 1 1 30%
+    flex: 1 1 30%
+    a
+      display: block
+    img
+      width: 100%
+      height: 140px
+      -o-object-fit: cover
+      object-fit: cover
+  .analytic-item-content
+    -webkit-box-flex: 1
+    -ms-flex: 1  1 70%
+    flex: 1  1 70%
+    padding-left: 20px
+    a
+      color: #0b509c
+      font-weight: bold
+      font-size: 1.14286rem
+    .analytic-item-author
+      font-size: 1rem
+      font-weight: 400
+      margin-top: 30px
+      display: inline-block
+      margin-right: 20px
+    .analytic-item-date
+      font-size: 1rem
+      font-weight: 400
+      margin-top: 30px
+      display: inline-block
+      margin-right: 20px
+      color: #949494
+
+@media (max-width: 992px)
+  .analytic-items .analytic-item
+    display: block
+
+@media (max-width: 992px)
+  .analytic-items .analytic-item-content
+    padding-left: 0
+    margin: 10px 0

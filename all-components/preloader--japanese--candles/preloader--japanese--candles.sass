@@ -1,0 +1,27 @@
+#preloader
+  position: relative
+  z-index: 997
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+  overflow: hidden
+  top: 50vh
+  left: 50vw
+  transform: translateX(-50%) translateY(-50%)
+  height: 150px
+  width: 150px
+  opacity: 1
+  transition: all 0.5s
+  .candle
+    position: relative
+    z-index: 998
+    width: 1px
+    background-color: #ccc
+    margin: 2px
+    transition: all 0.5s
+    .candle-body
+      position: absolute
+      z-index: 999
+      left: 50%
+      transform: translateX(-55%)
+      width: 3px

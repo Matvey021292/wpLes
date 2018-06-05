@@ -1,0 +1,48 @@
+<div id="app">
+    <div v-if="json !== null">
+        <div class="container container--facebook-en">
+            <div class="top_section">
+                <div class="top_section__comments-count">
+                    322 Comments
+                </div>
+                <div class="top_section__sort">
+                </div>
+            </div>
+            <div class="user_section">
+                <div class="user_section__user_photo">
+                    <img src="img/avatar.png" alt="">
+                </div>
+                <div class="user_section__content">
+                    <textarea class="textarea" placeholder="Add a comment..." @click="activeForm(); fakePath()"></textarea>
+                    <form v-show="formVisibility">
+                        <input type="checkbox" id="checkbox-facebook">
+                        <label class="label" for="checkbox-facebook">
+                                <span class="label__text">
+                                    Also post on Facebook
+                                </span>
+                            </label>
+                        <button @click="fakePath()" class="button active">
+                                Comment
+                            </button>
+                    </form>
+                </div>
+            </div>
+            <facebook-widget-en v-for="(data, index) in comments" :data="data" :img="json.options.img_dir" :url="json.options.default_url" :default_url="json.options.default_url" :key="index">
+
+            </facebook-widget-en>
+            <infinite-loading @infinite="infiniteHandler">
+                <span slot="no-more">
+                        No more comments :(
+                    </span>
+            </infinite-loading>
+            <div class="widget_info">
+                <span class="widget_info__icon">
+    
+                        </span>
+                <a v-bind:href="this.json.options.default_url" class="widget_info__text">
+                            Facebook comments plugin
+                        </a>
+            </div>
+        </div>
+    </div>
+</div>

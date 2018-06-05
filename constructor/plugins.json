@@ -1,0 +1,31 @@
+{
+	"hitech-dec": {
+		"name": "hitech-dec",
+		"js": ["./src/components/hitech-dec/jquery.hiTechDec.js"],
+		"img": "hitech-dec/screenshot.png",
+		"href": "#"
+	},
+	"jquery__method": {
+		"name": "jquery__method",
+		"js": ["./src/components/jquery__method/jquery__method.js"],
+		"img": "jquery__method/screenshot.jpg",
+		"href": "#"
+	},
+	"jquery__plugin": {
+		"name": "jquery__plugin",
+		"js": ["./src/components/jquery__plugin/jquery__plugin.js"],
+		"img": "jquery__plugin/screenshot.jpg",
+		"href": "#"
+	},
+	"getCrypto": {
+		"name": "getCrypto",
+		"html": ["components/getCrypto/getCrypto.html"],
+		"js": [
+			"./src/components/getCrypto/getCrypto.js",
+			"./src/components/getCrypto/getCrypto.common.js"
+		],
+		"sass": ["./src/components/getCrypto/getCrypto.scss"],
+		"img": "getCrypto/screenshot.jpg",
+		"href": "https://h17dev.online/getCrypto/"
+	}
+}

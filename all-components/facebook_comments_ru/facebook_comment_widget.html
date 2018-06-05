@@ -1,0 +1,48 @@
+<div id="app">
+    <div v-if="json !== null">
+        <div class="container container--facebook-ru">
+            <div class="top_section">
+                <div class="top_section__comments-count">
+                    322 коментарии
+                </div>
+                <div class="top_section__sort">
+                </div>
+            </div>
+            <div class="user_section">
+                <div class="user_section__user_photo">
+                    <img src="img/avatar.png" alt="">
+                </div>
+                <div class="user_section__content">
+                    <textarea class="textarea" placeholder="Добавьте коментарий..." @click="activeForm(); fakePath()"></textarea>
+                    <form v-show="formVisibility">
+                        <input type="checkbox" id="checkbox-facebook">
+                        <label class="label" for="checkbox-facebook">
+                                <span class="label__text">
+                                    Также опубликовать на Facebook
+                                </span>
+                            </label>
+                        <button @click="fakePath()" class="button active">
+                                Добавить
+                            </button>
+                    </form>
+                </div>
+            </div>
+            <facebook-widget-ru v-for="(data, index) in comments" :data="data" :img="json.options.img_dir" :url="json.options.default_url" :default_url="json.options.default_url" :key="index">
+    
+            </facebook-widget-ru>
+            <infinite-loading @infinite="infiniteHandler">
+                <span slot="no-more">
+                        Больше комментариев нет :(
+                    </span>
+            </infinite-loading>
+            <div class="widget_info">
+                <span class="widget_info__icon">
+    
+                    </span>
+                <a v-bind:href="this.json.options.default_url" class="widget_info__text">
+                    Плагин комментариев Facebook
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
